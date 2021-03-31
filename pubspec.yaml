@@ -1,0 +1,55 @@
+name: flutter_bloc_base_project
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #Make phone call or open web
+  url_launcher:
+
+  #iOS UIs
+  cupertino_icons: ^1.0.0
+
+  #Reactive-Dart
+  rxdart: ^0.25.0
+
+  #Business Logic Component
+  flutter_bloc: ^6.1.0
+
+  #Compare Objects
+  equatable: ^1.2.5
+
+  #Web-view
+  webview_flutter: ^1.0.7
+
+  #Json supporter
+  json_annotation: ^3.1.1
+
+  #Network
+  http: ^0.12.2
+  meta: ^1.2.4
+  http_parser: ^3.1.4
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+    
+  #Json supporter
+  json_serializable: ^3.5.1
+  build_runner: ^1.10.13
+
+  #Save data locally in the device
+  shared_preferences: ^0.5.12+4
+
+flutter:
+  uses-material-design: true
+
