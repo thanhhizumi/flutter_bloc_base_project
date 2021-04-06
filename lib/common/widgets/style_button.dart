@@ -37,22 +37,27 @@ class StyleButton extends StatelessWidget {
     return Container(
       margin: this.margin ?? EdgeInsets.all(0),
       padding: this.padding ?? EdgeInsets.all(0),
-      child: FlatButton(
-        height: this.buttonHeight ?? 32,
-        minWidth: this.buttonWidth ?? 40,
-        onPressed: this.buttonTapped,
-        child: Text(
-          '${this.title ?? ''}',
-          style: TextStyle(
-            fontSize: this.titleFontSize ?? 14,
-            color: this.titleColor ?? Colors.black,
-            fontWeight: this.titleFontWeight ?? FontWeight.normal,
+      height: this.buttonHeight ?? 32,
+      width: this.buttonWidth ?? 32,
+      child: Center(
+        child: TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: this.backgroundColor ?? Colors.white,
+            side: BorderSide(color: this.borderColor ?? Colors.transparent),
+            shape: BeveledRectangleBorder(
+                borderRadius:
+                    BorderRadius.all(Radius.circular(this.radius ?? 0.0))),
+          ),
+          onPressed: this.buttonTapped,
+          child: Text(
+            '${this.title ?? ''}',
+            style: TextStyle(
+              fontSize: this.titleFontSize ?? 14,
+              color: this.titleColor ?? Colors.black,
+              fontWeight: this.titleFontWeight ?? FontWeight.normal,
+            ),
           ),
         ),
-        color: this.backgroundColor ?? Colors.white,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(this.radius ?? 0.0),
-            side: BorderSide(color: this.borderColor ?? Colors.transparent)),
       ),
     );
   }
